@@ -36,7 +36,6 @@ div {
 .title {
     display: flex;
     flex-flow: column wrap;
-    flex-shrink: 20;
     font-size: 30px;
     text-align: center;
     padding: 0%;
