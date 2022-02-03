@@ -61,10 +61,21 @@ footer {
 
 .title {
     display: flex;
-    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     font-size: 30px;
     padding: 0%;
     margin: 0%;
+    animation-name: title-animation;
+    animation-timing-function: ease;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes title-animation {
+  from {top: -300px;}
+  to {top: 0px;}
 }
 
 .parent {
@@ -78,7 +89,6 @@ footer {
     z-index: 1;
     padding: 5px;
     transition: .8s ease;
-    border-radius: 16px;
 }
 
 .parent a {
@@ -102,9 +112,9 @@ footer {
     width: 130%;
     margin: 0;
     padding: 5px;
+    padding-left: 10px;
     text-align: left;
     transition: .8s ease;
-    border-radius: 16px;
 }
 
 .child a{
@@ -166,8 +176,8 @@ ul ul ul {
     gap: 500px;
 }
 
-.column-1,
-.column-2 {
+.left-column,
+.right-column {
     display: flex;
     flex-flow: column;
     width: 500px;
@@ -181,6 +191,32 @@ ul ul ul {
     position: relative;
     overflow: hidden;
     width: 500px;
+}
+
+.left-column {
+    position: relative;
+    animation-name: left-column;
+    animation-timing-function: ease;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes left-column {
+  from {left: -300px;}
+  to {left: 0px;}
+}
+
+.right-column {
+    position: relative;
+    animation-name: right-column;
+    animation-timing-function: ease;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes right-column {
+  from {right: -300px;}
+  to {right: 0px;}
 }
 
 .item-2,
